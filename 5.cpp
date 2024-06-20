@@ -15,7 +15,7 @@ public:
     }
     
     void check() {
-        int length = this->pass.length();       //длина строки
+        int length = pass.length();       //длина строки
         if (length <= 10) {
             cout << "Слабая степень безопасности" << endl;
         }
@@ -42,6 +42,7 @@ public:
         else {
             return false;
         }
+        return true;
     }
 
     bool operator != (const Password& a) {
@@ -59,11 +60,9 @@ public:
         else {
             return true;
         }
+        return false;
     }
 };
-
-
-
 
 int main()
 {
@@ -75,8 +74,6 @@ int main()
     b.check();
     cout << (a == b) << endl;
     cout << (a != b) << endl;
-
-
 
     return 0;
 }
